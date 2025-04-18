@@ -13,9 +13,8 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.GenericGenerator;
 
-import java.time.LocalDate;
+import java.util.Date;
 
 @Entity
   @Table(name = "magical_creatures")
@@ -46,6 +45,6 @@ import java.time.LocalDate;
     private boolean isDomesticated;
 
     @Column(name = "discovered_date", nullable = false)
-    private LocalDate discoveredDate;
+    private Date discoveredDate;
   }
 

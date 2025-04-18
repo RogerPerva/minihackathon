@@ -15,7 +15,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.time.LocalDate;
+import java.util.Date;
 
 @Entity
 @Table(name = "spells")
@@ -47,6 +47,6 @@ public class SpellEntity {
     private boolean requiresWand;
 
     @Column(name = "created_at", nullable = false)
-    private LocalDate createdAt;
+    private Date createdAt;
 
 }
