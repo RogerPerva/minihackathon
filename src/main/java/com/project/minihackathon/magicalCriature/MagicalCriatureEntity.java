@@ -46,5 +46,15 @@ import java.util.Date;
 
     @Column(name = "discovered_date", nullable = false)
     private Date discoveredDate;
+
+  public MagicalCriatureEntity updateFrom(MagicalCriatureEntity other) {
+    this.setSpecies(other.getSpecies());
+    this.setDescription(other.getDescription());
+    this.setDangerLevel(other.getDangerLevel());
+    this.setHabitat(other.getHabitat());
+    this.setDomesticated(other.isDomesticated());
+    this.setDiscoveredDate(other.getDiscoveredDate());
+    return this;
+  }
   }
 

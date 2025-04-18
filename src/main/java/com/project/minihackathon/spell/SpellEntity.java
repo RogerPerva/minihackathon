@@ -49,4 +49,14 @@ public class SpellEntity {
     @Column(name = "created_at", nullable = false)
     private Date createdAt;
 
+    public SpellEntity updateFrom(final SpellEntity other) {
+        this.setName(other.getName());
+        this.setDescription(other.getDescription());
+        this.setDifficulty(other.getDifficulty());
+        this.setType(other.getType());
+        this.setRequiresWand(other.isRequiresWand());
+        this.setCreatedAt(other.getCreatedAt());
+        return this;
+    }
 }
+
