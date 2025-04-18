@@ -1,5 +1,6 @@
 package com.project.minihackathon.wizard;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,15 +16,9 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/wizards")
+@RequiredArgsConstructor
 public class WizardController {
-
-
   private final WizardRepository wizardRepository;
-
-  @Autowired
-  public WizardController(WizardRepository wizardRepository) {
-    this.wizardRepository = wizardRepository;
-  }
 
   @GetMapping
   public List<WizardEntity> getAllWizards() {
